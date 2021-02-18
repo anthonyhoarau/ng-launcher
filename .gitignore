@@ -1,3 +1,12 @@
+*-debug.log
+*-error.log
+/.nyc_output
+/dist
+/lib
+# Ignore package-lock.json because we use yarn
+/package-lock.json
+/tmp
+
 # Logs
 logs
 *.log
@@ -102,3 +111,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
