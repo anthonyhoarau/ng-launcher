@@ -1,0 +1,58 @@
+{
+  "name": "@llioss/nglauncher",
+  "description": "Angular application and test launcher",
+  "version": "0.0.0",
+  "author": "Anthony Vincent Hoarau",
+  "bin": {
+    "nglauncher": "./bin/run"
+  },
+  "bugs": "https://github.com/ng-launcher/nglauncher/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "@types/node": "^10",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "eslint-config-oclif-typescript": "^0.1",
+    "mocha": "^5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8",
+    "typescript": "^3.3",
+    "standard-version": "^9.1.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/ng-launcher/nglauncher#readme",
+  "keywords": [
+    "angular",
+    "tools",
+    "launcher"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "nglauncher"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llioss/ng-launcher.git"
+  },
+  "scripts": {
+    "release": "standard-version",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rimraf lib && tsc -b && oclif-dev readme",
+    "test": "echo NO TESTS"
+  },
+  "types": "lib/index.d.ts"
+}
