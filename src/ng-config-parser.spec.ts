@@ -6,5 +6,5 @@ test('should read angular.json file and extract apps and tests', () => {
   expect(projects).toBeDefined();
   expect(Array.isArray(projects)).toBeTruthy();
   expect(projects.length).toBeGreaterThan(1);
-  expect(projects[0]).toMatchObject({type: "application", name: 'ngtest'} as AngularProject);
+  expect(projects[0]).toMatchObject({type: 'application', name: 'ngtest'} as AngularProject);
 });
