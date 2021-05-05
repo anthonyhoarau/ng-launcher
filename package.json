@@ -6,7 +6,7 @@
   "bin": {
     "nglauncher": "./bin/run"
   },
-  "bugs": "https://github.com/ng-launcher/nglauncher/issues",
+  "bugs": "https://github.com/llioss/ng-launcher/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
@@ -41,7 +41,7 @@
     "/bin",
     "/lib"
   ],
-  "homepage": "https://github.com/ng-launcher/nglauncher#readme",
+  "homepage": "https://github.com/llioss/ng-launcher#readme",
   "keywords": [
     "angular",
     "tools",
