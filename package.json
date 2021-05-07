@@ -1,7 +1,7 @@
 {
   "name": "@llioss/nglauncher",
   "description": "Angular application and test launcher",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Anthony Vincent Hoarau",
   "bin": {
     "nglauncher": "./bin/run"
