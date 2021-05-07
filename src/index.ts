@@ -5,6 +5,7 @@ import * as Parser from '@oclif/parser';
 import {exec} from 'child_process';
 import * as chalk from 'chalk';
 import * as figlet from 'figlet';
+import {ProcessLauncher} from './process-launcher';
 
 enum ActionType {
   Serve,
@@ -89,19 +90,39 @@ class Nglauncher extends Command {
 
   private _processServe(appName: string) {
     this.log(`Starting ${appName} app`);
-    exec(`npm run ng -- serve ${appName}`);
+    ProcessLauncher.launch('npm', ['run', 'ng', '--', 'serve', appName], {
+      stdout: (out) => this.log(out),
+      stderr: (out) => this.log(out),
+      error: (code, msg) => this.error(`${msg}`),
+    });
   }
 
   private _processTest(appName: string) {
-    exec(`npm run ng -- test ${appName}`);
+    this.log(`Testing ${appName} app`);
+    ProcessLauncher.launch('npm', ['run', 'ng', '--', 'test', appName], {
+      stdout: (out) => this.log(out),
+      stderr: (out) => this.log(out),
+      error: (code, msg) => this.error(`${msg}`),
+    });
   }
 
   private _processE2e(appName: string) {
-    exec(`npm run ng -- e2e ${appName}-e2e`);
+    this.log(`End-to-End testing ${appName} app`);
+    ProcessLauncher.launch('npm', ['run', 'ng', '--', 'e2e', appName], {
+      stdout: (out) => this.log(out),
+      stderr: (out) => this.log(out),
+      error: (code, msg) => this.error(`${msg}`),
+    });
   }
 
   private _processBuild(appName: string) {
     exec(`npm run ng -- build ${appName}`);
+    this.log(`Building ${appName} app`);
+    ProcessLauncher.launch('npm', ['run', 'ng', '--', 'build', appName], {
+      stdout: (out) => this.log(out),
+      stderr: (out) => this.log(out),
+      error: (code, msg) => this.error(`${msg}`),
+    });
   }
 
   private _displayCliInfo() {

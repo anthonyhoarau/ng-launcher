@@ -15,6 +15,9 @@ Angular application and test launcher
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
 # Usage
 <!-- usage -->
 ```sh-session
@@ -41,8 +44,22 @@ USAGE
 ...
 ```
 <!-- usagestop -->
+```sh-session
+$ npm install -g @llioss/nglauncher
+$ nglauncher COMMAND
+running command...
+$ nglauncher (-v|--version|version)
+@llioss/nglauncher/0.0.0 win32-x64 node-v14.15.4
+$ nglauncher --help [COMMAND]
+USAGE
+  $ nglauncher COMMAND
+...
+```
+<!-- usagestop -->
 # Commands
 <!-- commands -->
+
+<!-- commandsstop -->
 
 <!-- commandsstop -->
 
