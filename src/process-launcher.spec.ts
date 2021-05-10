@@ -10,7 +10,7 @@ test('should launch child process and display stdout log', done => {
 });
 
 test('should launch child process and display stderr log', done => {
-  ProcessLauncher.launch('find', ['.'], {
+  ProcessLauncher.launch('foo', ['.'], {
     stderr: out => {
       expect(out).toBeDefined();
       done();
